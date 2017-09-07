@@ -5,7 +5,7 @@ max_index=30
 
 while [ $index -lt $max_index ]
 do
-  if [ -e "*2017_lecture${index}.pdfi*" ]; then
+  if [ -e "*2017_lecture${index}.pdf*" ]; then
     index=$(( index+1 ))
     continue
   fi
