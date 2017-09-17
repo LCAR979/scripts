@@ -14,7 +14,7 @@ from bs4 import BeautifulSoup
 
 def get_links():
     """get all *-handout.tar file links from CSAPP lab page"""
-    base_url ='http://csapp.cs.cmu.edu/public/labs.html'
+    base_url = 'http://csapp.cs.cmu.edu/public/labs.html'
     webpage = requests.get(base_url).content
     soup = BeautifulSoup(webpage, 'lxml')
     a_tag_list = soup.findAll('a', attrs={'href': re.compile(r"handout.tar")})
